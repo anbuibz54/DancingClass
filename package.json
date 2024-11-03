@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "node ./fix-react-native-paper-bottom-tabs.ts"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.0.0",
@@ -35,7 +36,9 @@
     "@react-native/eslint-config": "0.76.1",
     "@react-native/metro-config": "0.76.1",
     "@react-native/typescript-config": "0.76.1",
+    "@tanstack/eslint-plugin-query": "^5.59.7",
     "@types/react": "^18.2.6",
+    "@types/react-query": "^1.2.8",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
     "eslint": "^8.19.0",

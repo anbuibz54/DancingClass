@@ -1,17 +1,13 @@
 import * as React from 'react';
 import {BottomNavigation,useTheme} from 'react-native-paper';
 import {CommonActions} from '@react-navigation/native';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 export default function BottomTabs({
   navigation,
   state,
   descriptors,
   insets,
-}: {
-  navigation: any;
-  state: any;
-  descriptors: any;
-  insets: any;
-}) {
+}: BottomTabBarProps) {
   const theme = useTheme();
   return (
     <BottomNavigation.Bar
@@ -30,9 +26,7 @@ export default function BottomTabs({
         if (event.defaultPrevented) {
           preventDefault();
         } else {
-          //@ts-ignore
           navigation.dispatch({
-             //@ts-ignore
             ...CommonActions.navigate(route.name, route.params),
             target: state.key,
           });

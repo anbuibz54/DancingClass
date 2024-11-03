@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { View ,Text} from 'react-native';
 
 export default function Profile(){
     return(
-        <View>Profile Screen</View>
+        <View><Text>Profile Screen</Text></View>
     );
 }

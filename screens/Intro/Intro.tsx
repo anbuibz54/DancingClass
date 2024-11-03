@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { View,Text } from 'react-native';
 
 export default function Intro(){
     return(
-        <View>Intro Screen</View>
+        <View><Text>Intro Screen</Text></View>
     );
 }

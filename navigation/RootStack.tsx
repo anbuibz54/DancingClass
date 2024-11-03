@@ -4,7 +4,7 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import Splash from '../screens/Splash/Splash';
 import Intro from '../screens/Intro/Intro';
 import BottomTabsVariant from './BottomTabStack';
-import ROUTES from './ROUTES';
+import ROUTES from './routes';
 
 export type RootStackParamList = {
     [ROUTES.DASH_BOARD]: BottomTabBarProps;
@@ -17,7 +17,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export function RootStack() {
     return (
       <Stack.Navigator
-        initialRouteName={ROUTES.SPLASH_SCREEN}
+        initialRouteName={ROUTES.DASH_BOARD}
         screenOptions={{
           headerShown: false,
         }}>

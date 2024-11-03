@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity,Text } from 'react-native';
 import type { RootBottomTabsParamList } from '../../navigation/BottomTabStack';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import ROUTES from '../../navigation/routes';
@@ -7,10 +7,11 @@ import ROUTES from '../../navigation/routes';
 type Props = BottomTabScreenProps<RootBottomTabsParamList,'home'>;
 export default function Home(props:Props){
     return(
-        <View>Home Screen
+        <View>
+            <Text>Home Screen</Text>
             <TouchableOpacity onPress={()=>{
                 props.navigation.navigate(ROUTES.PROFILE);
-            }}> Go to Profile</TouchableOpacity>
+            }}><Text>Go to Profile</Text></TouchableOpacity>
         </View>
     );
 }
